@@ -1,4 +1,29 @@
-# Unfire Autonomy · Open Agentic Web Research Lab
+# Unfire Autonomy — Evidence-First Agentic Web
+
+**An open-web research demonstration of human-governed agents, fictional policy decisions and read-only interoperability.**
+
+[**Try the live research lab**](https://ondmindmanagement-hub.github.io/unfire-autonomy-agentic-web/) · [Read the public agent manifest](https://ondmindmanagement-hub.github.io/unfire-autonomy-agentic-web/agent-manifest.json)
+
+The keyless policy inspector is free and works in your browser without a provider account. The separate AI assistant uses the visitor's own compatible model provider and credentials. **This is research, not a deployed enterprise service or a certified safety product.**
+
+## Authentic browser captures
+
+These are real Safari captures of the same verified source build deployed publicly, running locally with invented data. They are not generated or composited app mockups.
+
+**Fixed-policy review** — an invented record update is flagged for human review, with zero business effects.
+
+![Real screenshot: deterministic policy requests fictional human review](docs/screenshots/policy-review.webp)
+
+**Sensitive action blocked** — an invented customer-data export is denied, without an approval path.
+
+![Real screenshot: prohibited data export is denied](docs/screenshots/policy-denial.webp)
+
+**Reference browser runtime** — declared agent network and read-only site tools. A model provider must be configured by the visitor.
+
+![Real screenshot: agentic-web browser runtime with API key notice](docs/screenshots/agent-runtime.webp)
+
+---
+
 
 Public-hosting candidate (22 November 2026). Research-stage fictional data only,
 no payments, user data, external side effects or claims of independent certification.
@@ -41,3 +66,11 @@ should therefore avoid sensitive or high-balance keys, use a short-lived limited
 if needed, and delete the saved profile afterwards. For strongest credential separation,
 deploy this project to its own distinct HTTPS subdomain before promoting live BYOK.
 The default eight-case fixed-policy demonstration does not require BYOK.
+
+## Code reuse and licensing
+
+The public repository makes Unfire-authored source readable for technical inspection.
+No blanket open-source reuse licence has yet been granted for the Unfire-authored files.
+Third-party browser runtime components retain their upstream Apache 2.0 licence
+(\`runtime/LICENSE.txt\`), and attribution is documented in \`NOTICE.md\`.
+A separate owner licensing decision is pending before the final hackathon submission.
