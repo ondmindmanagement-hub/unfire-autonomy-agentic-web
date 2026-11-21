@@ -1,0 +1,31 @@
+name: Verify Autonomy Static Agentic Web
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  verify:
+    name: Validate public bundle and safety invariants
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout Unfire source
+        uses: actions/checkout@v4
+      - name: Setup Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run dependency-free tests
+        run: npm run check
+      - name: Fetch pinned Cognizant validator
+        run: |
+          git init --quiet /tmp/agentic-web
+          git -C /tmp/agentic-web remote add origin https://github.com/cognizant-ai-labs/agentic-web.git
+          git -C /tmp/agentic-web fetch --quiet --depth 1 origin f154be8f43fb6152be221279cada7da6a1e931ea
+          git -C /tmp/agentic-web checkout --quiet FETCH_HEAD
+      - name: Check generated network with official validator
+        run: |
+          node /tmp/agentic-web/skills/agentify-website/scripts/build_network.mjs             "$PWD/autonomy_gate.hocon"             --manifest "$PWD/agent-manifest.json"             --runtime "$PWD/runtime"             --check
