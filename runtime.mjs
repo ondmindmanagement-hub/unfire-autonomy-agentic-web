@@ -68,7 +68,7 @@ export function runFictionalNetwork({manifest, network, scenario}) {
   const agents = new Map(network.tools.map(x=>[x.name,x]));
   const front = manifest.networks[0].front_man;
   if (!agents.get(front)) return {ok:false,errors:["Front agent missing"],executed:0,externalRequests:0};
-  steps.push({agent: front, message: "Read fictional request and delegate local policy review"});
+  steps.push({agent: "local_intake", message: "Read invented request; no AI model or remote execution involved in this fixed-policy inspector"});
   // This offline UI preview is not a model-run agent delegation. It applies a fixed
   // policy and a fixed evidence check. The separate reference runtime above the page
   // is the actual LLM agent runner when the visitor configures a model provider.
