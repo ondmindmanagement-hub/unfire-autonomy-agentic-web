@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Unfire Autonomy: a local deterministic research experiment in human review boundaries for fictional agent workflows." />
+  <meta name="theme-color" content="#09130f" />
+  <link rel="canonical" href="https://ondmindmanagement-hub.github.io/unfire-autonomy-agentic-web/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Unfire Autonomy — Human-Governed Agentic Web Research" />
+  <meta property="og:description" content="Explore a fictional read-only agent workflow, deterministic decisions and consent-oriented research. Open web demonstration by Unfire." />
+  <meta property="og:url" content="https://ondmindmanagement-hub.github.io/unfire-autonomy-agentic-web/" />
+  <meta name="robots" content="index,follow" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <title>Unfire Autonomy / Agentic Web Research Lab</title>
+  <link rel="stylesheet" href="./style.css" /><link rel="stylesheet" href="./assistant.css" />
+  <script type="module" src="./app.mjs"></script><script type="module" src="./site.js"></script>
+</head>
+<body>
+<div class="site">
+  <header class="nav">
+    <div class="logotype"><span class="logo-mark" aria-hidden="true">U</span> UNFIRE <span class="nav-divider">/</span> <span class="nav-sub">AUTONOMY</span></div>
+    <div class="nav-meta"><span class="status-pulse" aria-hidden="true"></span> LOCAL RESEARCH PREVIEW · v0.1</div>
+  </header>
+  <main>
+    <section class="intro">
+      <div class="eyebrow"><span class="line"></span> HUMAN GOVERNANCE · FICTIONAL EXECUTION</div>
+      <h1>Intelligence, with<br/><em>clear boundaries.</em></h1>
+      <p>Explore how an agent workflow can classify a fictional action, delegate an inspection and leave a traceable, human-reviewed decision. The policy inspector always runs locally in your browser. The optional agent assistant connects to a provider you explicitly choose, with no Unfire-owned API key.</p>
+      <div class="facts">
+        <span><strong>02</strong> declared AI agents</span><span><strong>08</strong> synthetic scenarios</span><span><strong>00</strong> external actions</span>
+      </div>
+    </section>
+    <section class="workspace" aria-label="Fictional action inspector">
+      <div class="panel work">
+        <div class="panel-title"><span class="section-no">01</span><h2>Propose an action</h2><span class="mini-label">INPUT · LOCAL ONLY</span></div>
+        <label for="case-choice">Fictional case</label>
+        <select id="case-choice"><option value="">Loading scenarios…</option></select>
+        <label for="action-choice">Requested operation</label>
+        <select id="action-choice">
+          <option value="inspect_status">Inspect fictional status — read only</option>
+          <option value="update_record">Update fictional record — review required</option>
+          <option value="issue_refund">Issue refund — prohibited</option>
+          <option value="export_customer_data">Export customer data — prohibited</option>
+          <option value="nonsense_action">Unknown action — fail closed</option>
+        </select>
+        <label for="description">Fictional scenario description</label>
+        <textarea id="description" maxlength="4000" rows="5" spellcheck="true"></textarea>
+        <div class="action-row">
+          <button id="run" class="primary" type="button">Inspect policy <span aria-hidden="true">↗</span></button>
+          <button id="reset" class="secondary" type="button">Reset</button>
+        </div>
+        <p class="microcopy">Synthetic data only. Do not enter client records, secrets, payment details or personal information.</p>
+      </div>
+      <div class="panel report">
+        <div class="panel-title"><span class="section-no">02</span><h2>Decision report</h2><span class="mini-label">TRACE · READ ONLY</span></div>
+        <div id="report-placeholder" class="placeholder"><span class="placeholder-icon" aria-hidden="true">⌁</span><h3>Ready for inspection.</h3><p>Select a fictional scenario and inspect the policy. Agent events appear here, with no external side effects.</p></div>
+        <div id="report" class="hidden" aria-live="polite">
+          <div class="result-meta"><span id="result-id">—</span><span id="result-priority">—</span></div>
+          <div class="decision-area"><span class="mini-label">POLICY DECISION</span><div id="decision" class="big-decision">—</div><p id="reason"></p></div>
+          <div class="review-controls" id="review-controls" hidden>
+            <p class="review-head">Optional fictional human decision</p>
+            <p class="review-disclaimer">This is not an authenticated approval. No action will execute.</p>
+            <div class="action-row">
+              <button id="approve" type="button" class="positive">Simulate approval</button>
+              <button id="reject" type="button" class="secondary">Reject</button>
+            </div>
+          </div>
+          <p id="review-status" class="review-status" aria-live="polite"></p>
+          <div class="trace-title"><span class="mini-label">LOCAL DELEGATION TRACE</span><span>3 stages</span></div>
+          <ol id="steps" class="trace"></ol>
+          <div class="summary-grid">
+            <div><span class="mini-label">THIRD-PARTY API CALLS</span><strong id="requests">0</strong></div>
+            <div><span class="mini-label">EXECUTED ACTIONS</span><strong id="executed">0</strong></div>
+            <div><span class="mini-label">LIVE MODEL</span><strong id="active-model">None</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="assistant" class="assistant" aria-labelledby="assistant-heading">
+  <div class="eyebrow">EXPERIMENT / 04 · REFERENCE BROWSER RUNTIME</div>
+  <h2 id="assistant-heading">Inspect with an agent.</h2>
+  <p>Ask about a fictional case. The model can call two <strong>read-only site actions</strong>, returning a policy trace without changing records. Use AI model settings to select a compatible provider and supply your own key. No Unfire account or subscription is needed for the fictional inspector.</p>
+  <p class="assistant-note">If you enable a model provider, your questions and the fictional case data read by these tools go to that chosen model endpoint. Never provide secrets, confidential records or real personal information. No provider key is included with the published website, and the browser never shares that key with peer networks.</p>
+<p class="assistant-note" role="note"><strong>Credential safety:</strong> AI model settings may store your BYOK key in this site's browser storage. On GitHub Pages, storage belongs to the account's shared <code>ondmindmanagement-hub.github.io</code> origin. Use only a low-limit temporary test key, or use the keyless policy inspector; remove saved setup after testing. Never provide confidential inputs. No credentials are supplied by Unfire.</p>
+  <p id="assistant-status" role="status">Loading reference runtime…</p>
+  <div id="agent-app">
+    <div data-ns-slot="header"></div>
+    <div class="assistant-panels">
+      <div data-ns-slot="chat"></div>
+      <div data-ns-slot="agents"></div>
+    </div>
+    <div data-ns-slot="settings"></div>
+  </div>
+</section>
+<section class="limits">
+      <div><span class="eyebrow">BOUNDARY / 03</span><h2>What this does not prove.</h2></div>
+      <p>This is an early-stage research demonstration using invented incidents. The policy inspector is deterministic. The separate agent assistant can use a visitor-chosen language model, but neither mode authenticates human approvals, executes business operations, calls MCP services, or proves production safety, customer ROI or certification.</p>
+    </section>
+  </main>
+  <footer><span>UNFIRE / EARLY RESEARCH</span><span>Read-only public lab · No mandatory paid API</span><span>22 NOV 2026</span></footer>
+</div>
+<noscript><p style="padding:24px">This browser research lab requires JavaScript. No payment or account registration is needed for the fictional demo.</p></noscript></body>
+</html>

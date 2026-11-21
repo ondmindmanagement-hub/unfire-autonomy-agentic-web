@@ -1,0 +1,18 @@
+{
+  "protocol": "nsdeploy-link/v1",
+  "exports": [
+    {
+      "network": "autonomy_gate",
+      "front_man": "autonomy_coordinator",
+      "aliases": [
+        "autonomy_gate",
+        "autonomy_coordinator"
+      ],
+      "url": "autonomy_gate"
+    }
+  ],
+  "imports": [],
+  "link_updates": {
+    "mode": "browser-local"
+  }
+}

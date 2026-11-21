@@ -1,0 +1,60 @@
+:root{color-scheme:dark;--bg:#09120f;--panel:#0d1915;--border:#2a3830;--fg:#eaf3ed;--muted:#91a29a;--mint:#b2f5cf;--accent:#92eac0;--amber:#efce91;--danger:#f1aaa3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 72% 4%,#1b392b 0,transparent 27%),var(--bg);color:var(--fg);min-height:100vh;-webkit-font-smoothing:antialiased}.site{max-width:1440px;margin:auto;padding:0 clamp(20px,5vw,84px)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:29px 0;border-bottom:1px solid var(--border)}.logotype{font-size:13px;letter-spacing:.16em;font-weight:800;display:flex;align-items:center;gap:12px}.logo-mark{display:inline-grid;place-items:center;background:var(--mint);color:#0e2518;font-size:13px;width:28px;height:28px;border-radius:8px;letter-spacing:0}.nav-divider{color:#4a6756}.nav-sub{font-weight:500;color:var(--muted)}.nav-meta{font-size:10px;letter-spacing:.16em;color:#a7c6b2}.status-pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--mint);margin-right:8px}
+.intro{padding:clamp(50px,8vw,98px) 0 54px}.eyebrow{font-size:11px;letter-spacing:.17em;font-weight:700;color:var(--mint);display:flex;align-items:center;gap:12px}.line{display:block;width:32px;height:1px;background:var(--mint)}h1{font-size:clamp(44px,6vw,86px);letter-spacing:-.074em;line-height:1.04;margin:28px 0;max-width:1100px;font-weight:650}h1 em{font-style:normal;color:var(--mint)}.intro>p{font-size:clamp(15px,1.45vw,18px);line-height:1.7;color:#afc0b5;max-width:760px}.facts{display:flex;flex-wrap:wrap;gap:clamp(14px,4vw,54px);margin-top:42px}.facts span{font-size:12px;color:var(--muted)}.facts strong{font-weight:550;color:var(--fg);font-size:22px;margin-right:12px;font-variant-numeric:tabular-nums}
+.workspace{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{border:1px solid var(--border);border-radius:17px;padding:clamp(22px,3vw,38px);background:linear-gradient(125deg,#111f19, #0b1611)}.panel-title{display:flex;align-items:center;gap:15px;margin-bottom:32px}.panel-title h2{font-size:19px;letter-spacing:-.035em;margin:0;flex:1}.section-no{font-variant-numeric:tabular-nums;color:var(--mint);font-size:12px}.mini-label{color:#83a494;font-size:10px;font-weight:700;letter-spacing:.13em}label{display:block;font-size:12px;color:#bad0c1;margin-bottom:9px}select,textarea{display:block;width:100%;background:#09140f;color:var(--fg);border:1px solid #35473b;border-radius:10px;padding:14px;font:inherit;font-size:14px;line-height:1.5;margin-bottom:22px;outline:0}select:focus,textarea:focus{border-color:var(--mint);box-shadow:0 0 0 2px #b2f5cf22}textarea{resize:vertical;min-height:135px}.action-row{display:flex;flex-wrap:wrap;gap:10px}button{border-radius:10px;border:1px solid #394b40;padding:14px 20px;font:inherit;font-size:12px;font-weight:700;cursor:pointer;transition:.15s;min-height:44px}button:hover{transform:translateY(-1px)}button:focus-visible{outline:2px solid var(--mint);outline-offset:3px}.primary{background:var(--mint);border-color:var(--mint);color:#092014;display:flex;gap:22px;justify-content:space-between;align-items:center;min-width:183px}.secondary{background:#14221b;color:var(--fg)}.positive{background:#244c39;color:var(--mint);border-color:#488767}.microcopy{font-size:11px;line-height:1.6;color:#819a8a;margin:22px 0 0}.placeholder{display:grid;place-content:center;text-align:center;min-height:440px;color:#a3b7a9}.placeholder-icon{font-size:60px;color:var(--mint)}.placeholder h3{font-size:22px;color:var(--fg);margin:14px 0}.placeholder p{font-size:13px;line-height:1.6;max-width:300px;margin:auto}.hidden{display:none!important}.result-meta{display:flex;justify-content:space-between;border-bottom:1px solid var(--border);padding:4px 0 24px;color:#b1c6b5;font-size:11px}.decision-area{padding:30px 0}.big-decision{font-size:clamp(26px,3vw,42px);letter-spacing:-.055em;font-weight:750;margin:10px 0}.big-decision.allow{color:var(--mint)}.big-decision.review{color:var(--amber)}.big-decision.deny{color:var(--danger)}#reason{font-size:13px;line-height:1.65;color:#a5bba9}.review-controls{border:1px solid #4b5941;border-radius:12px;padding:16px;margin-bottom:22px}.review-head{margin:0 0 4px;font-weight:700;font-size:13px}.review-disclaimer{font-size:11px;color:#bdc7b8;line-height:1.5}.review-status{font-size:12px;color:var(--mint)}.trace-title{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--border);font-size:11px;color:#8aa698}.trace{padding:0;margin:20px 0 30px;list-style:none}.trace li{position:relative;padding:0 0 19px 25px;border-left:1px solid #375444;margin-left:7px}.trace li:last-child{border-color:transparent}.trace li:before{content:"";position:absolute;left:-4px;top:1px;border:1px solid var(--mint);height:7px;width:7px;border-radius:50%;background:#13251a}.trace strong{font-size:12px;letter-spacing:.02em}.trace p{font-size:12px;line-height:1.5;color:#9cb2a4;margin:7px 0 0}.summary-grid{border-top:1px solid var(--border);padding-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.summary-grid>div{display:grid;gap:10px}.summary-grid strong{font-size:24px;font-weight:600}.limits{border-top:1px solid var(--border);padding:60px 0;margin-top:80px;display:grid;grid-template-columns:1fr 1.35fr;gap:40px}.limits h2{font-size:clamp(25px,3vw,38px);letter-spacing:-.04em;margin:18px 0}.limits p{font-size:14px;line-height:1.8;color:#a8bfb1;margin-top:0}footer{border-top:1px solid var(--border);padding:30px 0 38px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:#8ea696;font-size:10px;letter-spacing:.1em}
+@media(max-width:850px){.workspace,.limits{grid-template-columns:1fr}.limits{margin-top:38px;padding-top:38px}.nav-meta{display:none}.panel{min-height:0}.placeholder{min-height:290px}}@media(prefers-reduced-motion:reduce){button{transition:none}button:hover{transform:none}}
+
+#assistant{margin-top:64px;padding:48px clamp(20px,3vw,38px);border-radius:17px;border:1px solid var(--border);background:#112319}
+#assistant h2{font-size:clamp(24px,3.2vw,40px);letter-spacing:-.04em;margin:14px 0}
+#assistant>p{font-size:13px;line-height:1.7;color:#b8c9be;max-width:850px}
+#assistant #assistant-status{color:#a9e8c7}
+#assistant .assistant-panels{min-width:0}
+#assistant #agent-app{--ns-primary:#163c2a;--ns-accent:#225e43;--ns-text:#eaf3ed;--ns-bg:#0e1f16}
+@media(max-width:850px){#assistant{padding:22px 14px}}
+
+/* Site-only visual integration of the unmodified sponsor runtime. */
+#assistant #agent-app{
+ --ns-bg:#0d2118;
+ --ns-fg:#edf9f0;
+ --ns-panelbg:#10291e;
+ --ns-msgbg:#19372a;
+ --ns-border:#385c48;
+ --ns-muted:#adc5b6;
+ --ns-primary:#174e35;
+ --ns-accent:#23583e;
+ --ns-font:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ color:var(--ns-fg);
+}
+#assistant #agent-app .ns-msg.bot{color:#effaf1}
+#assistant #agent-app .ns-msg.user{color:#fff}
+#assistant #agent-app .ns-chat{border-color:var(--ns-border)}
+#assistant #agent-app .ns-agents{border-color:var(--ns-border)}
+#assistant #agent-app [data-ns-slot="agents"]{color:var(--ns-fg)}
+#assistant #agent-app .ns-devtoggle{color:var(--ns-fg)}
+#assistant #agent-app .ns-widget,
+#assistant #agent-app .ns-settings-body{color:var(--ns-fg)}
+#assistant #agent-app .ns-msg a{color:#b5f0d2;text-underline-offset:3px}
+#assistant #agent-app .ns-consent{background:#342d19;color:#f8f1d7;border:1px solid #796538}
+#assistant #agent-app .ns-consent-actions button{border-color:#8e8458}
+#assistant #agent-app input,
+#assistant #agent-app textarea,
+#assistant #agent-app select{color:var(--ns-fg);background:#0c1b14;border-color:var(--ns-border)}
+#assistant #agent-app input::placeholder{color:#abc2b1}
+#assistant #agent-app .ns-header{color:var(--ns-fg)}
+#assistant #agent-app button:focus-visible{outline:2px solid #b2f5cf;outline-offset:3px}
+
+/* Sponsor sidebar originally uses light hard-coded surfaces; retain contrast in Unfire dark mode. */
+#assistant #agent-app .ns-agents,
+#assistant #agent-app .ns-dev {background:#10281d;color:#ecf8f0;border-color:#3a5b46}
+#assistant #agent-app .ns-anode {background:#173c2a;color:#effbf1;border-color:#4b7559}
+#assistant #agent-app .ns-aname {color:#f1fbf4;font-weight:650}
+#assistant #agent-app .ns-arole {color:#c4dbcc}
+#assistant #agent-app .ns-aicon {color:#edfaf0}
+#assistant #agent-app .ns-agents h3 {color:#c3dfc9;letter-spacing:.1em}
+#assistant #agent-app .ns-settings-body,
+#assistant #agent-app .ns-settings,
+#assistant #agent-app .ns-graph {background:#10291e;color:#edf9f0}
+#assistant #agent-app .ns-dev button,
+#assistant #agent-app .ns-settings button {color:inherit;border-color:#4b6d58}
+#assistant #agent-app .ns-tbox {background:#173c2a;color:#edf9f0;border-color:#4b7559}

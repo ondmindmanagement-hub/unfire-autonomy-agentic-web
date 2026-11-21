@@ -1,0 +1,7 @@
+{
+  "protocol": "nsdeploy-agent-mcp/v1",
+  "network": "autonomy_gate",
+  "front_man": "autonomy_coordinator",
+  "available": false,
+  "reason": "Static browser proof-of-concept: no public MCP facade."
+}

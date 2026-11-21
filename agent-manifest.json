@@ -1,0 +1,78 @@
+{
+  "brand": "Unfire Autonomy | Evidence First",
+  "networks": [
+    {
+      "name": "autonomy_gate",
+      "front_man": "autonomy_coordinator",
+      "hocon": "./autonomy_gate.network.json",
+      "description": "Explore eight invented workflow incidents with read-only policy tools; AI requires a visitor-selected provider.",
+      "tags": [
+        "agentified-website",
+        "research",
+        "synthetic-only"
+      ],
+      "sample_queries": [
+        "List the fictional incidents you can inspect.",
+        "Inspect fictional case SIM-001 and explain the human review boundary.",
+        "Explain why simulated refunds are blocked.",
+        "Can you really issue a refund or edit customer data?"
+      ]
+    }
+  ],
+  "llm_router": {
+    "base_url": "https://api.otari.ai/api/v1",
+    "mock": false,
+    "byok_router": "https://api.otari.ai/api/v1"
+  },
+  "allowed_peers": [],
+  "peer_policy": {
+    "mode": "closed",
+    "deny_origins": [],
+    "note": "No outbound peer calls from this public lab. Other authorized sites may request fictional read-only actions, subject to their own consent gate."
+  },
+  "agent_mcp": {
+    "protocol": "nsdeploy-agent-mcp/v1",
+    "network": "autonomy_gate",
+    "front_man": "autonomy_coordinator",
+    "available": false,
+    "reason": "Static browser proof-of-concept: no public MCP facade."
+  },
+  "theme": {
+    "primary": "#154936"
+  },
+  "linking": {
+    "protocol": "nsdeploy-link/v1",
+    "exports": [
+      {
+        "network": "autonomy_gate",
+        "front_man": "autonomy_coordinator",
+        "aliases": [
+          "autonomy_gate",
+          "autonomy_coordinator"
+        ],
+        "url": "autonomy_gate"
+      }
+    ],
+    "imports": [],
+    "link_updates": {
+      "mode": "browser-local"
+    }
+  },
+  "deployment": {
+    "mode": "static",
+    "self_contained_runtime": true,
+    "browser_mock": false,
+    "direct_byok": true,
+    "direct_mcp_requires_cors": true,
+    "public_mcp_facade": false
+  },
+  "actions": {
+    "version": 1,
+    "module": "./site-actions.js",
+    "bridge": "./bridge/action-bridge.html",
+    "agentTools": [
+      "get_fictional_catalog",
+      "inspect_fictional_case"
+    ]
+  }
+}

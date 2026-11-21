@@ -1,0 +1,50 @@
+[
+  {
+    "id": "SIM-001",
+    "action": "update_record",
+    "description": "Refrigeration failure: unsafe temperature reported by a fictional kiosk.",
+    "channel": "Sensor report"
+  },
+  {
+    "id": "SIM-002",
+    "action": "issue_refund",
+    "description": "Fictional buyer claims the payment was charged twice.",
+    "channel": "Buyer portal"
+  },
+  {
+    "id": "SIM-003",
+    "action": "inspect_status",
+    "description": "Vending unit offline after a fictional network outage.",
+    "channel": "Monitoring"
+  },
+  {
+    "id": "SIM-004",
+    "action": "update_record",
+    "description": "Low stock of bottled water; routine restock may be needed.",
+    "channel": "Inventory"
+  },
+  {
+    "id": "SIM-005",
+    "action": "export_customer_data",
+    "description": "Request includes a placeholder phone number and seeks data export.",
+    "channel": "Support"
+  },
+  {
+    "id": "SIM-006",
+    "action": "update_record",
+    "description": "Duplicate incident for a jammed dispenser.",
+    "channel": "Operator"
+  },
+  {
+    "id": "SIM-007",
+    "action": "nonsense_action",
+    "description": "Unclear incident with an unrecognized operation.",
+    "channel": "Unknown"
+  },
+  {
+    "id": "SIM-008",
+    "action": "update_record",
+    "description": "Fictional machine is overheating and reports smoke.",
+    "channel": "Sensor report"
+  }
+]
