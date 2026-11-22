@@ -20,6 +20,10 @@ These are real Safari captures of the same verified source build deployed public
 
 ![Real screenshot: prohibited data export is denied](docs/screenshots/policy-denial.webp)
 
+**Actual keyless runtime action** — this genuine Safari recording frame shows the reference browser action registry returning a REVIEW_REQUIRED JSON receipt without live LLM inference or business effects.
+
+![Real Safari footage showing the keyless read-only runtime tool receipt](docs/screenshots/keyless-reference-tool-real.webp)
+
 **Reference browser runtime** — declared agent network and read-only site tools. A model provider must be configured by the visitor.
 
 ![Real screenshot: agentic-web browser runtime with API key notice](docs/screenshots/agent-runtime.webp)
