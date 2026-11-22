@@ -97,3 +97,30 @@ test("nothing in authored entrypoints references private Mac folders",async()=>{
   assert.doesNotMatch(src,/\/Users\/|gho_[A-Za-z0-9]{8}|hello@unfire\.technology/);
  }
 });
+
+test("keyless tool laboratory visibly distinguishes real tool call from AI inference",async()=>{
+ const html=await read("index.html");
+ assert.match(html,/id="tool-run"/);
+ assert.match(html,/INDEPENDENT RUNTIME VERIFICATION/);
+ assert.match(html,/not LLM inference/);
+ assert.match(html,/id="tool-receipt"/);
+});
+test("tool callback authorizes only matching same-origin read action",async()=>{
+ const src=await read("site.js");
+ assert.match(src,/x\.effect==="read"/);
+ assert.match(src,/x\.action==="inspect_fictional_case"/);
+ assert.match(src,/x\.origin===location\.origin/);
+ assert.match(src,/x\.arguments\?\.id===id/);
+});
+test("browser action receipt is verified and business effects must stay zero",async()=>{
+ const src=await read("site.js");
+ assert.match(src,/receipt\.status!=="succeeded"/);
+ assert.match(src,/receipt\.result\?\.caseId!==id/);
+ assert.match(src,/receipt\.result\?\.executed!==0/);
+ assert.match(src,/inferenceUsed:false/);
+});
+test("synthetic controls are bounded and disabled until runtime loads",async()=>{
+ const html=await read("index.html");
+ assert.equal((html.match(/<option value="SIM-00[1-8]">/g)||[]).length,8);
+ assert.match(html,/id="tool-run"[^>]*disabled/);
+});

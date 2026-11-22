@@ -58,3 +58,17 @@
 #assistant #agent-app .ns-dev button,
 #assistant #agent-app .ns-settings button {color:inherit;border-color:#4b6d58}
 #assistant #agent-app .ns-tbox {background:#173c2a;color:#edf9f0;border-color:#4b7559}
+
+/* Real reference-runtime tool receipt — independent of model inference. */
+.agent-tool-lab{border:1px solid #436950;border-radius:15px;padding:24px;margin:26px 0 28px;background:linear-gradient(130deg,#163526,#0e251a);color:#edf9f0}
+.agent-tool-header{display:flex;align-items:start;justify-content:space-between;gap:20px}
+.agent-tool-header h3{font-size:clamp(18px,2vw,24px);margin:10px 0 0;letter-spacing:-.03em}
+.agent-tool-tag{font-size:10px;letter-spacing:.07em;color:#c1e6cb;background:#214a32;border:1px solid #467453;border-radius:999px;padding:8px 11px;white-space:nowrap}
+.agent-tool-lab>p{font-size:12px;line-height:1.7;color:#c1d4c7}
+.agent-tool-form{display:flex;align-items:end;gap:12px;flex-wrap:wrap;margin:18px 0}
+.agent-tool-form label{margin:0 2px 13px 0;min-width:95px}
+.agent-tool-form select{width:min(100%,390px);margin:0;flex:1;min-width:220px}
+.agent-tool-form button{white-space:nowrap;min-width:205px}
+.agent-tool-form button:disabled{opacity:.45;cursor:not-allowed}
+.agent-tool-receipt{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px;line-height:1.65;background:#091a11;border:1px solid #3d694b;border-radius:12px;padding:18px;color:#c9f0d6;max-height:330px;overflow:auto}
+@media(max-width:720px){.agent-tool-lab{padding:17px 14px}.agent-tool-header{flex-direction:column;gap:10px}.agent-tool-form{align-items:stretch}.agent-tool-form label{width:100%;margin:0}.agent-tool-form select,.agent-tool-form button{width:100%;min-width:0}}

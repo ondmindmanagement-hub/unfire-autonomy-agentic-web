@@ -4,7 +4,9 @@
 
 [**Try the live research lab**](https://ondmindmanagement-hub.github.io/unfire-autonomy-agentic-web/) · [Read the public agent manifest](https://ondmindmanagement-hub.github.io/unfire-autonomy-agentic-web/agent-manifest.json)
 
-The keyless policy inspector is free and works in your browser without a provider account. The separate AI assistant uses the visitor's own compatible model provider and credentials. **This is research, not a deployed enterprise service or a certified safety product.**
+The keyless policy inspector is free and works in your browser without a provider account. A separate keyless tool-verification panel exercises the actual read-only reference-runtime ActionRegistry and prints verifiable receipts. The tool test involves no AI inference; the separate AI assistant remains BYOK. The separate AI assistant uses the visitor's own compatible model provider and credentials. **This is research, not a deployed enterprise service or a certified safety product.**
+
+Project documentation: [Judge guide](JUDGE_GUIDE.md) · [Rights and attribution](RIGHTS_AND_ATTRIBUTION.md) · [Third-party notices](NOTICE.md)
 
 ## Authentic browser captures
 
@@ -25,7 +27,7 @@ These are real Safari captures of the same verified source build deployed public
 ---
 
 
-Public-hosting candidate (22 November 2026). Research-stage fictional data only,
+Public research deployment (22 November 2026). Research-stage fictional data only,
 no payments, user data, external side effects or claims of independent certification.
 
 - Free, keyless deterministic policy inspector: eight invented workflow cases
@@ -39,7 +41,7 @@ no payments, user data, external side effects or claims of independent certifica
 - Static site: manifest, graph, bridge, CORS-compatible assets and discovery records.
 
 The original public Unfire Autonomy product page remains separately hosted and unchanged.
-License notice: NOTICE.md and runtime/LICENSE.txt.
+Third-party runtime licence: runtime/LICENSE.txt. Original Unfire-authored elements remain without any general reuse licence; see RIGHTS_AND_ATTRIBUTION.md.
 
 ## Publication
 

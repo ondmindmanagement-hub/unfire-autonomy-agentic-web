@@ -85,6 +85,32 @@
   <p class="assistant-note">If you enable a model provider, your questions and the fictional case data read by these tools go to that chosen model endpoint. Never provide secrets, confidential records or real personal information. No provider key is included with the published website, and the browser never shares that key with peer networks.</p>
 <p class="assistant-note" role="note"><strong>Credential safety:</strong> AI model settings may store your BYOK key in this site's browser storage. On GitHub Pages, storage belongs to the account's shared <code>ondmindmanagement-hub.github.io</code> origin. Use only a low-limit temporary test key, or use the keyless policy inspector; remove saved setup after testing. Never provide confidential inputs. No credentials are supplied by Unfire.</p>
   <p id="assistant-status" role="status">Loading reference runtime…</p>
+  <div class="agent-tool-lab" aria-labelledby="agent-tool-lab-heading">
+    <div class="agent-tool-header">
+      <div>
+        <span class="mini-label">INDEPENDENT RUNTIME VERIFICATION / NO API KEY</span>
+        <h3 id="agent-tool-lab-heading">Run the actual read-only website tool.</h3>
+      </div>
+      <span class="agent-tool-tag">0 external business actions</span>
+    </div>
+    <p>This tests the declared browser action registry, not LLM inference or a remote business system. It reads one of eight invented cases and prints the original tool receipt. The test never approves or changes a record.</p>
+    <div class="agent-tool-form">
+      <label for="tool-case">Synthetic case ID</label>
+      <select id="tool-case" aria-label="Case to inspect through the reference agent tool" required>
+        <option value="SIM-001">SIM-001 — fictional refrigeration issue</option>
+        <option value="SIM-002">SIM-002 — fictional duplicate charge</option>
+        <option value="SIM-003">SIM-003 — fictional network issue</option>
+        <option value="SIM-004">SIM-004 — fictional inventory issue</option>
+        <option value="SIM-005">SIM-005 — fictional customer export</option>
+        <option value="SIM-006">SIM-006 — fictional duplicate incident</option>
+        <option value="SIM-007">SIM-007 — unknown operation</option>
+        <option value="SIM-008">SIM-008 — fictional overheat issue</option>
+      </select>
+      <button id="tool-run" type="button" class="primary" disabled>Execute read-only tool</button>
+    </div>
+    <p id="tool-state" role="status" aria-live="polite">Reference action registry loading…</p>
+    <pre id="tool-receipt" class="agent-tool-receipt" tabindex="0" aria-label="Read-only tool receipt" hidden></pre>
+  </div>
   <div id="agent-app">
     <div data-ns-slot="header"></div>
     <div class="assistant-panels">
